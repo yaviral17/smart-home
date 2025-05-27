@@ -1,0 +1,36 @@
+package-lock.json
+/node_modules/
+.DS_Store
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Build output
+dist/
+# Dependency directories
+jspm_packages/
+
+# Coverage directory used by tools like istanbul
+coverage/
+# Miscellaneous
+*.log
+# IDE specific files
+.idea/
+.vscode/
+# Operating system files
+Thumbs.db
+# Temporary files
+*.tmp
+# Backup files
+*.bak
+# Environment variables
+.env.local
+# Ignore test output
+test-output/
+# Ignore build artifacts
+build/
+# Ignore specific configuration files
+config.json
+# Ignore specific directories
