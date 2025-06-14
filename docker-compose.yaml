@@ -1,12 +1,13 @@
 version: "3.9"
 services:
-  smart-home:
+  server:
     build: .
     container_name: smart-home-server
     ports:
-      - "8080:6579"
+      - "4000:4000"
+    env_file:
+      - .env
     restart: unless-stopped
-    # environment:
-    #   - NODE_ENV=production
-    # volumes:
-    #   - ./data:/app/data   # Uncomment if you want persistence
+
+volumes:
+  mongodb_data: 

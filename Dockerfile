@@ -1,20 +1,18 @@
-# Use the official Node.js LTS image
-FROM node:18-alpine
+FROM node:20-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json (if present)
+# Copy package files
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the code
+# Copy source code
 COPY . .
 
-# Expose port (default is 8080)
-EXPOSE 8080
+# Expose the port
+EXPOSE 4000
 
-# Command to run your server
-CMD ["node", "server.js"]
+# Start the server
+CMD ["npm", "run", "dev"] 
